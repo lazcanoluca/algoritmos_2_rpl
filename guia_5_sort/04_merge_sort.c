@@ -1,6 +1,9 @@
-#include <stdbool.h>
-#include <stdio.h>
-#define MAX_ARRAY 100
+
+// Empezamos con el primero de los tres sorts que se ven en la materia Algo2Mendez. Como ya estamos en temas de Algo2, en vez de recibir un vector desordenado y otro donde ir enviando los elementos ordenados, se recibe solamente un vector. Al principio, se recibe el vector desordenado, y al finalizar el algoritmo, el mismo debe encontrarse ordenado.
+
+// Este algoritmo puede hacerse de manera tanto iterativa como recursiva, cualquiera está bien (mientras funcione, claro).
+
+// Como venimos viendo hasta ahora, se recibe también un booleano para decidir si debemos ordenar de manera ascendente o descendente el vector.
 
 #include <stdbool.h>
 
@@ -71,30 +74,4 @@ void merge_sort(int* numeros,
 
         merge(numeros, medio, tope, ascendente);
     }
-}
-
-void printArray(int A[], int size)
-{
-    int i;
-    for (i = 0; i < size; i++)
-        printf("%d ", A[i]);
-    printf("\n");
-}
-
-int main(int argc, char const *argv[])
-{
-        int arr1[MAX_ARRAY] = { 7, 4, 8, 1, 3, 9, 2 };
-        int arr2[MAX_ARRAY] = { 7, 4, 8, 1, 3, 9, 2 };
-        int tope = 7; // en realidad es cantidad, no tope.
-
-        printArray(arr1, 7);
-        printArray(arr2, 7);
-
-        merge_sort(arr1, tope, true);
-        merge_sort(arr2, tope, false);
-
-        printArray(arr1, 7);
-        printArray(arr2, 7);
-
-        return 0;
 }

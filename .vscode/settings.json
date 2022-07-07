@@ -1,0 +1,6 @@
+{
+        "files.associations": {
+                "*.txt": "csv (colon)",
+                "string.h": "c"
+        }
+}
