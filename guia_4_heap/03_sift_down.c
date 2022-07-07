@@ -1,3 +1,7 @@
+// Ya entendimos sift_up y cómo usarla en heap_insertar. Pasemos a entender sift_down, que de manera análoga nos sirve para heap_extraer_raiz.
+
+// Se recibe el vector de enteros, el tope del mismo y la posición a partir de la cual hay que aplicar la función.
+
 void sift_down(int* vector, int tope, int pos_actual) {
     if (!vector) return;
 
