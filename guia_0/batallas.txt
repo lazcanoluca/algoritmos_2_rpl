@@ -1,8 +1,0 @@
-Vulpix;
-1;1;1;
-Pikachu;
-2;2;2;
-Squirtle;
-3;3;3;
-Ultimo;
-3;3;4;

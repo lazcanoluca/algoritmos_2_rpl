@@ -1,16 +1,18 @@
-#include <string.h>
-#include <stdio.h>
-#define MAX_NOMBRE 30
-#define MAX_POK 10
+// Terminemos esta guía a lo grande!
 
-typedef struct pokemon{
-    char nombre[MAX_NOMBRE];
-    int b_ganadas;
-    int b_perdidas;
-    int b_empatadas;
-} pokemon_t;
+// Último ejercicio de archivos. Ahora, lo almacenado en el archivo corresponde a información de pokemones. No se sabe cuántos pokemones hay en el archivo, sabemos que no va a haber más de 10.
 
-// ENTREGA
+// También conocemos cómo están organizados:
+
+// Vulpix;
+// 15;20;19;
+// Donde Vulpix es el nombre de ese pokemon, 15 es la cantidad de batallas ganadas, 20 es la cantidad de batallas perdidas y 19 es la cantidad de batallas empatadas.
+
+// Se pide devolver el pokemon que compitió en más batallas, contando las que ganó, empató y perdió. Se puede asumir que no se va a recibir un archivo nulo.
+
+// Y no te preocupes por el archivo, nosotros lo cerramos detrás de bambalinas ;)
+
+#include "solucion.h"
 
 pokemon_t pokemon_con_mas_batallas(FILE* archivo) {
 
@@ -46,16 +48,4 @@ pokemon_t pokemon_con_mas_batallas(FILE* archivo) {
     pokemon.b_empatadas = max_e;
 
     return pokemon;
-}
-
-// FIN ENTREGA
-
-int main(int argc, char const *argv[])
-{
-    FILE *archivo = fopen("batallas.txt", "r");
-    char nombre[MAX_NOMBRE];
-    pokemon_t pokemon = pokemon_con_mas_batallas(archivo);
-    printf("%s: %i\n", pokemon.nombre, pokemon.b_ganadas + pokemon.b_perdidas + pokemon.b_empatadas);
-    fclose(archivo);
-    return 0;
 }
